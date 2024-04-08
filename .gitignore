@@ -1,0 +1,16 @@
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+.direnv
+.envrc
+result
+figures/samples

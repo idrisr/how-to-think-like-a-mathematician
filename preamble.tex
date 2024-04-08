@@ -1,0 +1,31 @@
+\newcommand{\obc}{\text{ob}\thinspace\mathcal{C}}
+\usepackage{float}
+\usepackage{standalone}
+\usepackage{lastpage}
+\usepackage{titlesec}
+\usepackage{tocloft} % Provides ToC customization
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{quotes}
+
+\newenvironment{proofitem}
+{ \begin{itemize}[label={}, leftmargin=2mm, itemsep=0.5mm] }
+{\end{itemize}}
+
+\newcounter{tttacounter}
+\counterwithin{tttacounter}{section} % Question counter resets with each section
+\newenvironment{ttta}{
+    \par\vspace{0.5cm}
+    \noindent\hrulefill
+    \par\vspace{0.2cm}
+    \refstepcounter{tttacounter} % Associate \label with this counter
+    \textbf{\textsc{TTTA} \thetttacounter{}} % Display the counter
+    \ignorespaces
+    \label{ttta:unique-label} % Add a label
+    \addcontentsline{toc}{subsubsection}{\textsc{T} \thetttacounter} % Add to ToC
+}
+{\par\vspace{0.0cm}}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[subsection] % Can be changed to other levels
