@@ -4,34 +4,30 @@
 \begin{document}
 
 \begin{tikzpicture}
-\pgfkeys{/pgf/number format/.cd,
-fixed,
-fixed zerofill,
-precision=1,}
-    \newcommand{\calculateDistanceAndPrint}[2]{
-       \pgfmathsetmacro{\p1}{$({#1}) - ({#2})$ )}
-       \pgfmathsetmacro{\distance}{veclen({\x1} - {\y1})}
-       \pgfmathparse{\distance/28.45274}
-       \pgfmathprintnumber{\pgfmathresult}
-    }
-    \coordinate[label=A] (A) at (0, 1);
-    \coordinate[label=B] (B) at (3, 4);
-    \coordinate[label=C] (C) at (8, 3);
-    \draw let
-        \p{AB} = ($ (B) - (A) $),
-        \n{AB} = {veclen(\x{AB},\y{AB})},
-        \p{AC} = ($ (C) - (A) $),
-        \n{AC} = {veclen(\x{AC},\y{AC})},
-        \p{BC} = ($ (B) - (C) $),
-        \n{BC} = {veclen(\x{BC},\y{BC})}
-    in
-    (A) -- node[left]{\pgfmathparse{\n{AB}/28.45274}\pgfmathprintnumber{\pgfmathresult}}
-    (B) -- node[left]{\pgfmathparse{\n{BC}/28.45274}\pgfmathprintnumber{\pgfmathresult}}
-    (C) -- node[left]{\pgfmathparse{\n{AC}/28.45274}\pgfmathprintnumber{\pgfmathresult}}
-    (A) ;
-    % (A) -- node[left]{\calculateDistanceAndPrint{(A)}{(B)}}
-    % (B) -- node[left]{\calculateDistanceAndPrint{(B)}{(C)}}
-    % (C) -- node[left]{\calculateDistanceAndPrint{(C)}{(A)}}
-    % (A) ;
+	\pgfkeys{/pgf/number format/.cd,
+		fixed,
+		fixed zerofill,
+		precision=1,}
+	\newcommand{\calculateDistanceAndPrint}[2]{
+	\pgfmathsetmacro{\p1}{$({#1}) - ({#2})$ )}
+	\pgfmathsetmacro{\distance}{veclen({\x1} - {\y1})}
+	\pgfmathparse{\distance/28.45274}
+	\pgfmathprintnumber{\pgfmathresult}
+	}
+	\coordinate[label=A] (A) at (0, 1);
+	\coordinate[label=B] (B) at (3, 4);
+	\coordinate[label=C] (C) at (8, 3);
+	\draw let
+	\p{AB} = ($ (B) - (A) $),
+	\n{AB} = {veclen(\x{AB},\y{AB})},
+	\p{AC} = ($ (C) - (A) $),
+	\n{AC} = {veclen(\x{AC},\y{AC})},
+	\p{BC} = ($ (B) - (C) $),
+	\n{BC} = {veclen(\x{BC},\y{BC})}
+	in
+	(A) -- node[left]{\pgfmathparse{\n{AB}/28.45274}\pgfmathprintnumber{\pgfmathresult}}
+	(B) -- node[left]{\pgfmathparse{\n{BC}/28.45274}\pgfmathprintnumber{\pgfmathresult}}
+	(C) -- node[left]{\pgfmathparse{\n{AC}/28.45274}\pgfmathprintnumber{\pgfmathresult}}
+	(A) ;
 \end{tikzpicture}
 \end{document}

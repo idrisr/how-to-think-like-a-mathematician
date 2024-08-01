@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\usepackage{tkz-elements}
+\usepackage{tkz-euclide}
+\usetikzlibrary{calc}
+\usetkzobj{all}
+
+\begin{document}
+
+\begin{tkzelements}
+	z.A = point: new(0,1)
+	z.B = point: new(3,4)
+	z.C = point: new(8,3)
+	T.ABC = triangle: new (z.A,z.B,z.C)
+\end{tkzelements}
+\pgfkeys{/pgf/number format/.cd,
+	fixed,
+	fixed zerofill,
+	precision=1,}
+
+\begin{tikzpicture}
+	\tkzGetNodes
+	\tkzDrawPolygons(A,B,C)
+	\tkzLabelPoints(A,C)
+	\tkzLabelPoints[above](B)
+	\tkzLabelSegments[sloped](A,B){$\pgfmathprintnumber{\tkzUseLua{T.ABC.c}}$}
+	\tkzLabelSegments[sloped](A,C){$\pgfmathprintnumber{\tkzUseLua{T.ABC.b}}$}
+	\tkzLabelSegments[sloped](B,C){$\pgfmathprintnumber{\tkzUseLua{T.ABC.a}}$}
+\end{tikzpicture}
+
+
+\end{document}

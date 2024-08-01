@@ -14,3 +14,5 @@
 .envrc
 result
 figures/samples
+.devenv
+.pre-commit-config.yaml
