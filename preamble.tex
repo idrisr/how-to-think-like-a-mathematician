@@ -1,8 +1,95 @@
+\makeindex
+
+\usepackage{epigraph}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{dirtytalk}
 \usepackage{float}
+\usepackage{graphicx}
+\usepackage{hippoidP}
+\usepackage[hyperindex]{hyperref}
+\usepackage{hyperref}
+\usepackage{kantlipsum}
 \usepackage{lastpage}
+\usepackage{makeidx}
+\usepackage[margin=1.2in]{geometry}% Sets 1in margins.
+\usepackage{mathrsfs}
+\usepackage{minted}
+\usepackage{multicol}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepackage{standalone}
+\usepackage{standalone}
+\usepackage[style=authortitle]{biblatex}
+\usepackage[T1]{fontenc}
+\usepackage{tcolorbox}
 \usepackage{tikz}
+\usepackage{titlesec}
 \usepackage{tkz-elements}
 \usepackage{tkz-euclide}
+\usepackage{xcolor}
+
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{automata}
 \usetikzlibrary{calc}
+\usetikzlibrary{fit}
+\usetikzlibrary{petri}
+\usetikzlibrary{positioning}
 \usetikzlibrary{quotes}
+\tcbuselibrary{breakable}
+\tcbuselibrary{skins}
+\tcbuselibrary{theorems}
+
+\addbibresource{biblio.bib}
+
+\setlength{\parindent}{0pt}
+
+\renewcommand{\emph}[1]{\textit{#1}}
+\newcommand{\nth}[1]{\underline{\mathrm{#1}}}
+\setlength{\parindent}{0pt}
+
+\setlength{\parindent}{10pt}
+
+\definecolor{CaribbeanBlue}{RGB}{0, 206, 209} % Define Caribbean Blue
+\NewTcbTheorem[list inside=definition]{definition}
+{Definition}{
+	breakable,
+	colback=CaribbeanBlue!05,
+	colframe=CaribbeanBlue!35!black,
+	fonttitle=\bfseries}{th}
+
+\NewTcbTheorem[list inside=intuition]{intuition}{Intuition}{
+	breakable,
+	colback=blue!5,
+	colframe=blue!35!black,
+	fonttitle=\bfseries}{th}
+
+\NewTcbTheorem{example}{Example}{
+	breakable,
+	float,
+	colback=red!10,
+	colframe=red!35!black,
+	fonttitle=\bfseries}{th}
+
+\NewTcbTheorem[list inside=theorem]{theorem}{Theorem}{
+	breakable,
+	colback=gray!10,
+	colframe=gray!35!black,
+	fonttitle=\bfseries}{th}
+
+\NewTcbTheorem[
+	list inside=exercise2,
+	number within=section
+]
+{exercise2}{Exercise}{
+	breakable,
+	colback=white,
+	colframe=black,
+	fonttitle=\bfseries}{th}
+
+\newcounter{placeholdercounter}
+
+\renewcommand{\thesection}{\arabic{section}}
+\tcbset{enhanced jigsaw}

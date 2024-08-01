@@ -16,3 +16,11 @@ result
 figures/samples
 .devenv
 .pre-commit-config.yaml
+00-main.bbl-SAVE-ERROR
+00-main.bcf
+00-main.bcf-SAVE-ERROR
+00-main.definition
+00-main.idx
+00-main.ilg
+00-main.ind
+00-main.run.xml

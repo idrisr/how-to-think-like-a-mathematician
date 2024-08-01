@@ -1,5 +1,144 @@
-\documentclass[10pt]{article}
+\documentclass[12pt]{book}
 \input{preamble}
+\title{How to Think Like a Mathematician\footnote{\cite{houston2009}}\\Notes, Exercises, and Intuition}
+\author{Idris Raja}
+\date{August 2024}
+
 \begin{document}
-\include{03-writing-mathematics}
+\maketitle{}
+\epigraph{
+	Key practical advice for all aspiring mathematicians:
+	write mathematics correctly and create your own examples.
+}{Kevin Houston}
+\tableofcontents
+\tcblistof[\section]{definition}{List of Definitions}
+% \input{figures/01-triangles}
+% \input{figures/02-triangles}
+\setcounter{chapter}{2}
+
+\part{Study Skills for Mathematicians}
+\chapter{Writing mathematics I}
+\epigraph{There is nothing to mathematics\;(writing). All you do is sit down at
+	a \LaTeX{} terminal\;(typewriter) and bleed.}
+{Ernest Hemingway, paraphrased}
+
+
+\begin{definition}{Basic Rules}{}
+	\begin{enumerate}[label = {(\arabic*)}]
+		\item Write in sentences, using proper punctuation.
+		\item Keep it simple---short words, short sentences.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{Expressing Yourself Clearly}{}
+	\begin{enumerate}[label = {(\arabic*)}]
+		\item Explain what you are doing and keep the reader informed.
+		\item Explain your assertions---say where it came from.
+		\item Say what you mean---be precise verging on pedantic.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{Using Symbols}{}
+	\begin{enumerate}[label = {(\arabic*)}]
+		\item Prefer words over symbols, but don't eschew symbols.
+		\item Equals means equals, don't abuse ``$=$''.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{Finishing Off}{}
+	\begin{enumerate}[label = {(\arabic*)}]
+		\item Proofread your work. Read through it looking for errors:
+		      mathematical, typographical, semantic, grammatical, \ldots.
+		\item Reflect on the work after some time away. Think about how to
+		      deepen your understanding while also refining the presentation.
+	\end{enumerate}
+\end{definition}
+
+\chapter{Writing mathematics II}
+\epigraph{Mathematics reveals its secrets only to those who approach it with
+	pure love, for its own beauty} {Archimedes}
+
+\begin{definition}{Express Yourself Clearly}{}
+	\begin{enumerate}[label = {(\arabic*)}]
+		\item if you use ``if'', then use ``then''.
+		\item Call things by their correct name.
+		\item Avoid ``it'' and other ambiguous terms.
+	\end{enumerate}
+\end{definition}
+\begin{definition}{Words and Symbols}{}
+	\begin{enumerate}[label = {(\arabic*)}]
+		\item Don’t begin sentences with a symbol.
+		\item Don't abuse the implication symbol.
+		\item Use common symbols and notation.
+		\item Define your symbols and notation.
+	\end{enumerate}
+\end{definition}
+\begin{definition}{Good Writing Techniques Applies}{}
+	\begin{enumerate}[label = {(\arabic*)}]
+		\item Use connecting phrases to compose thoughts.
+		\item Use synonyms to avoid boring the reader.
+	\end{enumerate}
+\end{definition}
+
+\chapter{How to solve problems}
+\epigraph{I don't have any magical ability. I look at a problem, play with it,
+	work out a strategy.} {Terrance Tao}
+\begin{definition}{Polya's 4 Step Plan}{}
+	\begin{enumerate}[label = {(\roman*)}]
+		\item Understand the problem.
+		\item Devise a plan.
+		\item Execute the plan.
+		\item Look back.
+	\end{enumerate}
+	From~\cite{polya2014}.
+\end{definition}
+
+\begin{definition}{Understanding the Problem}{}
+	\begin{enumerate}[label = {(\alph*)}]
+		\item understand all the words and symbols in the problem
+		\item guess – use your intuition
+		\item what do you know about the hypothesis and conclusion?
+		\item work backwards and forwards
+		\item work with initial and special cases
+		\item work with a concrete case
+		\item draw a picture
+		\item think about a similar problem
+		\item find an equivalent problem
+		\item solve an easier problem
+		\item rewrite in symbols or words
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{Devising a Plan}{}
+	\begin{enumerate}[label = {(\alph*)}]
+		\item break the problem into pieces
+		\item find the right level
+		\item give things names
+		\item systematically choose a method
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{Executing the Plan}{}
+	\begin{enumerate}[label = {(\alph*)}]
+		\item check each step – don’t use intuition
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{Looking Back}{}
+	\begin{enumerate}[label = {(\alph*)}]
+		\item check the answer
+		\item find another solution
+		\item reflect
+	\end{enumerate}
+\end{definition}
+
+\part{How to think logically}
+
+
+% \part{Definitions, Theorems and Proofs}
+% \part{Techniques of Proof}
+% \part{Mathematics that all Good Mathematicians Need}
+% \part{Closing Remarks}
+
+\printbibliography{}
 \end{document}
